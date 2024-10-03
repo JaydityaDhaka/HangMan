@@ -67,6 +67,9 @@ void playHangMan(){
     int max_guesses = 6;
     int wrong_guesses = 0;
 
+    cout << "It is a " << s_word.length() << " letter word" << endl;
+    displayWord(s_word,guessed);
+
     while(wrong_guesses < max_guesses){
         bool a = isGuessed(guessed);
         if( a  == true){
@@ -75,7 +78,7 @@ void playHangMan(){
         }
         else if( a  == false){
             
-            char a1;        //alhabet one
+            char a1;        //alphabet one
             bool check = false;
             cout << "Enter an Alphabet" << endl;
             cin >> a1;
@@ -100,6 +103,7 @@ void playHangMan(){
     }
     if(wrong_guesses == max_guesses){
         cout << "You Lost!" << endl;
+        cout << "The word is: " << s_word << endl; 
     }
     
 
